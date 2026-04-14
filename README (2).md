@@ -261,13 +261,13 @@ Abaixo um exemplo real do dashboard gerado a partir dos dados desta API:
 
 O dashboard consome os quatro endpoints da API e apresenta três visões complementares:
 
-** Faturamento por Produto** *(canto superior esquerdo)*
+ Faturamento por Produto *(canto superior esquerdo)*
 Gráfico de barras gerado a partir do endpoint `/products`, exibindo a soma de faturamento por produto com classificação de outlier (`high` em verde claro · `normal` em verde escuro). O Notebook lidera com ~55 mil, destacando-se como outlier de alto desempenho.
 
-** Média de Total e Quantidade por Estado** *(canto superior direito)*
+ Média de Total e Quantidade por Estado *(canto superior direito)*
 Gráfico combinado (barras + linha) alimentado pelo endpoint `/vendas`, cruzando ticket médio e volume de vendas por estado. SP se destaca com o maior volume de quantidade (~38 unidades), enquanto SC e RJ lideram em ticket médio.
 
-** Média de Total por Mês** *(inferior)*
+ Média de Total por Mês *(inferior)*
 Gráfico de área gerado a partir do endpoint `/Data`, mostrando a evolução mensal do ticket médio. Fevereiro apresenta o pico (~2.150), com queda em março-abril e recuperação em maio — padrão identificado pelo módulo de detecção de outliers.
 
 ---
