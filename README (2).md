@@ -214,11 +214,11 @@ GET /products
 ```json
 [
   {
-    "produto": "Produto A",
-    "quantidade_vendida": 540,
+    "product": "Produto A",
+    "quantity": 540,
     "faturamento": 81000.00,
-    "estado_top": "SP",
-    "classificacao": "outlier"
+    "max_state": "SP",
+    "outlier": "normal"
   }
 ]
 ```
@@ -237,9 +237,9 @@ GET /clientes
 ```json
 [
   {
-    "cliente": "Nome do Cliente",
-    "compras_realizadas": 14,
-    "faturamento_total": 21000.00
+    "name": "Nome do Cliente",
+    "quantity": 14,
+    "faturamento": 21000.00
   }
 ]
 ```
@@ -261,13 +261,13 @@ Abaixo um exemplo real do dashboard gerado a partir dos dados desta API:
 
 O dashboard consome os quatro endpoints da API e apresenta três visões complementares:
 
-**① Faturamento por Produto** *(canto superior esquerdo)*
+** Faturamento por Produto** *(canto superior esquerdo)*
 Gráfico de barras gerado a partir do endpoint `/products`, exibindo a soma de faturamento por produto com classificação de outlier (`high` em verde claro · `normal` em verde escuro). O Notebook lidera com ~55 mil, destacando-se como outlier de alto desempenho.
 
-**② Média de Total e Quantidade por Estado** *(canto superior direito)*
+** Média de Total e Quantidade por Estado** *(canto superior direito)*
 Gráfico combinado (barras + linha) alimentado pelo endpoint `/vendas`, cruzando ticket médio e volume de vendas por estado. SP se destaca com o maior volume de quantidade (~38 unidades), enquanto SC e RJ lideram em ticket médio.
 
-**③ Média de Total por Mês** *(inferior)*
+** Média de Total por Mês** *(inferior)*
 Gráfico de área gerado a partir do endpoint `/Data`, mostrando a evolução mensal do ticket médio. Fevereiro apresenta o pico (~2.150), com queda em março-abril e recuperação em maio — padrão identificado pelo módulo de detecção de outliers.
 
 ---
