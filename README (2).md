@@ -161,13 +161,13 @@ GET /vendas
 ```json
 [
   {
-    "pedido_id": 1,
-    "cliente": "Nome do Cliente",
-    "produto": "Nome do Produto",
-    "quantidade": 10,
-    "valor_total": 500.00,
-    "estado": "SP",
-    "data": "2024-03-15"
+    "client_id": 1,
+    "name": "Nome do Cliente",
+    "product": "Nome do Produto",
+    "quantity": 10,
+    "total": 500.00,
+    "state": "SP",
+    "created_at": "2024-03-15"
   }
 ]
 ```
@@ -187,15 +187,15 @@ GET /Data
 [
   {
     "mes": "2024-01",
-    "quantidade_vendida": 320,
+    "quantity": 320,
     "faturamento": 48500.00,
-    "classificacao": "normal"
+    "outlier": "normal"
   },
   {
     "mes": "2024-03",
-    "quantidade_vendida": 890,
+    "quantity": 890,
     "faturamento": 134200.00,
-    "classificacao": "outlier"
+    "outlier": "high"
   }
 ]
 ```
