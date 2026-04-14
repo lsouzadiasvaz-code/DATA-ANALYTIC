@@ -38,9 +38,5 @@ class AnalyticManager:
             return df
         
         
-aa = AnalyticManager()
-print(aa.Product())     
 
-        
-        
         
